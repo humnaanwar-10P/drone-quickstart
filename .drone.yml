@@ -3,12 +3,14 @@ kind: pipeline
 type: exec
 name: default
 
+platform:
+  os: windows
+  arch: amd64
 
 steps:
 - name: hello
-  image: busybox
   commands:
-  - echo hello Drone CI 11
+  - echo hello Drone
 
 trigger:
   branch:
